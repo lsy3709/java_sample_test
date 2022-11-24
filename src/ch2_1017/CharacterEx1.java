@@ -20,6 +20,9 @@ public class CharacterEx1 {
 		System.out.println("=====================");
 		char ch3 = '한';
 		char ch4 = '\uD55C';
+		int b = -66;
+		System.out.println("b=====================");
+		System.out.println((char)b);
 		
 		System.out.println(ch3);
 		System.out.println(ch4);
