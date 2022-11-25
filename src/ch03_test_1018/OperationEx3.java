@@ -6,14 +6,14 @@ public class OperationEx3 {
 		int num1 = 10;
 		int i = 2;
 		
-		boolean value = ((num1 = num1 + 10 ) < 10) && ( ( i = i + 2 ) < 10);
-		System.out.println(value);
-		System.out.println(num1);
-		System.out.println(i);
+		boolean value = ((num1 = num1 + 10 ) > 10) && ( ( i = i + 2 ) < 10);
+		System.out.println("value 의 값 " + value);
+		System.out.println("num1 의 값 " +num1);
+		System.out.println("i 의 값 " +i);
 		
 		value = ((num1 = num1 + 10 ) > 10) || ( ( i = i + 2 ) < 10);
-		System.out.println(value);
-		System.out.println(num1);
-		System.out.println(i);
+		System.out.println("value 의 값 " + value);
+		System.out.println("num1 의 값 " +num1);
+		System.out.println("i 의 값 " +i);
 	}
 }

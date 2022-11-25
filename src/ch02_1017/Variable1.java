@@ -1,4 +1,4 @@
-package ch2_1017;
+package ch02_1017;
 
 import javax.swing.plaf.basic.BasicScrollPaneUI.HSBChangeListener;
 
