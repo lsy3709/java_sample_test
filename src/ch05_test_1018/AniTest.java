@@ -13,6 +13,21 @@ public class AniTest {
 		dog.age=1;
 		// 기본 메서드 하나 출력. 
 		dog.showInfo();
+		System.out.println("dog의 주솟값");
+		System.out.println(dog);
+		System.out.println(dog.name);
+		System.out.println(dog.age);
+		
+		//고양이 객체 생성, 이름, 나이 지정
+		//출력도 한번 합니다.
+		Animal cat = new Animal();
+		cat.name = "야옹이";
+		cat.age = 1;
+		cat.showInfo();
+		System.out.println("dog의 주솟값");
+		System.out.println(dog);
+		System.out.println("cat의 주솟값");
+		System.out.println(cat);
 		
 		
 	}
