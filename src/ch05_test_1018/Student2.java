@@ -16,12 +16,20 @@ public class Student2 {
 	
 	public static int sum2(int num1, int num2) { //void 리턴의 결괏값이 없다.
 		System.out.println(num1+num2);
+		sum3(100, 200);
 		return num1+num2; //결괏값의 반환 타입이 int임을 나타냄. 
 		// 해당 메서드 선언부에서 확인이 가능함. 
 		
 	}
 	
+public static void sum3(int num1, int num2) { //void 리턴의 결괏값이 없다.
+		
+		System.out.println("sum 함수를 호출한 결괏값 출력: " +num1+num2);
+		
+	}
+	
 	public static void main(String[] args) {
+		//메인 메소드가 먼저 호출되고,
 		
 		//해당 객체를 생성하는 new 키워드 설명을 안드렸음. 
 		Student2 lsy = new Student2();
@@ -31,7 +39,13 @@ public class Student2 {
 		// Student2() : 매개변수가 없는 기본 생성자라고 함. 
 		// 역할은 기본값을 초기화하는 역할. 
 		
+		//해당 객체를 통해서 함수를 호출. 
 		lsy.sum(10, 20);
+		
+		//지금은 객체 없이 해당 클래스 명으로 함수를 호출. 
+		int result = Student2.sum2(10, 20);
+		// 두번째 sum2 함수(메서드) 호출하는 부분.
+		
 	}
 	
 	
