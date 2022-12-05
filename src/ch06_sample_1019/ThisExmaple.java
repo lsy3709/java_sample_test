@@ -4,6 +4,7 @@ class BirthDay{
 	int day;
 	int month;
 	int year;
+	String name;
 	
 	//해당 멤버의 set/get 다 만들어서 -> 해결.
 	// BirthDay 의 객체를 하나 생성해보기. 참조형 변수 : ex1 -> 해결.
@@ -12,9 +13,9 @@ class BirthDay{
 	// showInfo 출력 해보기. -> 해결.
 	
 	// 추가 주문.
-	// 멤버에 변수에 name 추가하기.
-	// 멤버로 set/get 를 추가하기.
-	// 해당 생성자를 매개변수가 4개인 추가하기.
+	// 멤버에 변수에 name 추가하기. -> 해결
+	// 멤버로 set/get 를 추가하기. -> 해결
+	// 해당 생성자를 매개변수가 4개인 추가하기. -> 해결 
 	// 해당 생성자 매개변수가 4개를 호출하는 객체를 생성 후. 
 	// showInfo2 메서드를 만들어서 출력해보기. 
 	// 출력의 예
@@ -25,6 +26,28 @@ class BirthDay{
 		
 	}
 	
+	public void showInfo2() {
+		System.out.println(year + "년 " + month+"월 "+ day + "일" + " 이름 : " + getName());
+		
+	}
+	
+	//매개변수가 4개인 생성자 만들었음.
+	public BirthDay(int day, int month, int year, String name) {
+		super();
+		this.day = day;
+		this.month = month;
+		this.year = year;
+		this.name = name;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 	public void setYear(int year) {
 		this.year = year;
 	}
@@ -69,6 +92,19 @@ public class ThisExmaple {
 		
 		BirthDay ex1 = new BirthDay(5,12,2022);
 		ex1.showInfo();
+		BirthDay ex2 = new BirthDay(5,12,2022,"이상용");
+		System.out.println("기존 출력 : 년월일");
+		ex2.showInfo();
+		
+		System.out.println("2022년 12월 5일 , 이름: 이상용(자기이름) 형식으로 출력해보기.");
+		ex2.showInfo2();
+		
+		//이름 변경하기. 
+		
+		ex2.setName("이상용2");
+		System.out.println("이름 변경후 showInfo2 호출하기.");
+		ex2.showInfo2();
+		
 //		BirthDay bDay = new BirthDay();
 //		bDay.setYear(2000);
 //		System.out.println(bDay);
