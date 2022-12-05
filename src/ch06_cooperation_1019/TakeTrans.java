@@ -16,6 +16,7 @@ public class TakeTrans {
 		Student lsyStudent3 = new Student("이상용3", 20000);
 		KakoTaxi kakoTaxi3 = new KakoTaxi(3); 
 		lsyStudent3.takeTaxi(kakoTaxi3);
+		lsyStudent3.takeTaxi(new KakoTaxi(4));
 		System.out.println("=====================");
 		System.out.println("3번 이상용 학생의 택시 탑승 후 정보");
 		lsyStudent3.showInfo();

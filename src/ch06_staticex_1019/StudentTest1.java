@@ -4,6 +4,13 @@ public class StudentTest1 {
 
 	public static void main(String[] args) {
 
+		Student2 lsyStudent6 = new Student2();
+		System.out.println(Student2.getSerialNum());
+		Student2.setSerialNum(2000);
+		System.out.println(Student2.getSerialNum());
+
+
+				
 		//Student1 클래스로 객체를 생성해서, 자동으로 학번이 어떻게 부여 되는지 확인. 
 		Student1 lsyStudent3 = new Student1();
 		System.out.println("lsyStudent3의 학번: "+lsyStudent3.studentID);
