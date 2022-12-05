@@ -3,6 +3,7 @@ class Person{
 	String name;
 	int age;
 	
+	
 	Person(){
 		this("이름없음", 1);  // Person(String, int) 생성자 호출
 	}
@@ -15,7 +16,7 @@ class Person{
 	
 	// 정체가 메서드임. 그런데, 반환하는 형 : 클래스 형 (Person)
 	Person returnItSelf() {
-		return this;
+		return this; // 클래스 형 (Person) 인 참조형 변수를 가리킨다.: this 가. 
 	}
 
 	// get 메서드임. 반환하는 형 : 문자열 형(String)
