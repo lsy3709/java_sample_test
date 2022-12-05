@@ -20,6 +20,8 @@ public class FishBread {
 	
 	//매개변수가 2개인 생성자 -> 자동으로 만듦.
 	public FishBread(String powder, String redBean) {
+		//상속이라는 개념을 통해서 부모 클래스, 상위 클래스를 호출 할 때 사용하는 키워드. 초기화 하는 역할. 
+		// 암암리에 Object 최고상위 클래스 상속을 받아둠. 
 		super();
 		this.powder = powder;
 		this.redBean = redBean;
