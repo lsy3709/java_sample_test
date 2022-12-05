@@ -10,9 +10,27 @@ public class FishBread {
 	// 예2) getPowder() 메서드로 접근. 
 	// 자동으로 해당 멤버들에 대해서 set/get 자동으로 만들었음. 
 	
+	// 기본 생성자 -> JVM이 자동으로 만들어줌. 조건) 해당 생성자가 하나도 없을 경우. 
+	// 오버로드 -> 매개 변수가 2개인 생성자를 만들기.
+	
+	//기본생성자 -> 추가로 직접 만듦.
+	public FishBread() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	//매개변수가 2개인 생성자 -> 자동으로 만듦.
+	public FishBread(String powder, String redBean) {
+		super();
+		this.powder = powder;
+		this.redBean = redBean;
+	}
+	
+	
+
 	public String getPowder() {
 		return powder;
 	}
+	
 	public void setPowder(String powder) {
 		this.powder = powder;
 	}
