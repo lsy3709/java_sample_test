@@ -5,12 +5,23 @@ public class TakeTrans {
 	public static void main(String[] args) {
 		
 		//추가 주문 
-		// 카카오 택시 만들기. -> 클래스를 추가만들기.
-		// 기존 버스의 멤버 및 메서드를 최대한 활용하기(사실 복붙)
-		// 본인 이름으로 Student 객체를 생성해서 
+		// 카카오 택시 만들기. -> 클래스를 추가만들기. -> 해결
+		// 기존 버스의 멤버 및 메서드를 최대한 활용하기(사실 복붙) -> 해결
+		// 본인 이름으로 Student 객체를 생성해서 -> 해결
 		// 카카오 택시 타고, 
-		// 해당 학생의 정보와 카카오 택시 정보를 출력 해보세요.
+		// 조건이 없어서 추가했음. -> 해결
+		// 해당 학생 클래스에 카카오 택시를 타는 것을 추가. -> 해결
+		// 해당 학생의 정보와 카카오 택시 정보를 출력 해보세요. -> 해결
 		
+		Student lsyStudent3 = new Student("이상용3", 20000);
+		KakoTaxi kakoTaxi3 = new KakoTaxi(3); 
+		lsyStudent3.takeTaxi(kakoTaxi3);
+		System.out.println("=====================");
+		System.out.println("3번 이상용 학생의 택시 탑승 후 정보");
+		lsyStudent3.showInfo();
+		System.out.println("3번 택시의 정보");
+		kakoTaxi3.showInfo();
+		System.out.println("=====================");
 		
 		
 		//객체 생성하기. 생성자는 매개변수가 2개인 생성자 호출해서 객체 만들기. 
