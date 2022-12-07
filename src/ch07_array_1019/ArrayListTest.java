@@ -1,5 +1,6 @@
 package ch07_array_1019;
 
+// ctrl + shift + o : 자동임포트 
 import java.util.ArrayList;
 
 public class ArrayListTest {
@@ -8,12 +9,13 @@ public class ArrayListTest {
 
 		ArrayList<Book> library = new ArrayList<Book>();
 
-		
-		library.add( new Book("�¹���", "������") );
-		library.add( new Book("���̾�", "�츣�� �켼") );
-		library.add( new Book("��� �� ���ΰ�", "���ù�") );
-		library.add( new Book("����", "�ڰ渮") );
-		library.add( new Book("�����", "�������丮") );
+		// Book 타입만 넣기
+		//library.add("lsy");
+		library.add( new Book("태백산맥", "조정래") );
+		library.add( new Book("데미안", "헤르만 헤세") );
+		library.add( new Book("어떻게 살 것인가", "유시민") );
+		library.add( new Book("토지", "박경리") );
+		library.add( new Book("어린왕자", "생텍쥐페리") );
 		
 		for(int i=0; i<library.size(); i++){
 	
@@ -22,7 +24,7 @@ public class ArrayListTest {
 		}
 		
 		System.out.println();
-		System.out.println("=== ���� for�� ��� ===");
+		System.out.println("=== 향상된 for문 사용 ===");
 		for(Book book : library){
 			book.showBookInfo();
 		}

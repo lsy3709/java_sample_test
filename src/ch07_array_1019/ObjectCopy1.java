@@ -18,6 +18,13 @@ public class ObjectCopy1 {
  		
 		// 복사본 bookArray2 의 객체를 확인하기.( 주솟값 확인)
 System.out.println("bookArray2 출력하기.");
+		
+		//향상된 for 출력해보기.
+		for(Book lang : bookArray1){
+			System.out.println(lang);
+		}
+		System.out.println("bookArray2 출력하기.");
+		
  		for(int i=0; i<bookArray2.length; i++){
 			//bookArray2[i].showBookInfo();
 			System.out.println(bookArray2[i]);
