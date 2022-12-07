@@ -2,7 +2,7 @@ package ch07_arraylist_1020;
 
 import java.util.ArrayList;
 
-public class Student {
+public class Student { // Object 끝판 대장. 모든 클래스는 이 Object  상속.,
 	
 	//인스턴스 변수
 	int studentID;
@@ -16,6 +16,7 @@ public class Student {
 	ArrayList<Menu> LunchMenu;
 		
 	public Student(int studentID, String studentName){
+//		super();
 		this.studentID = studentID;
 		this.studentName = studentName;
 		
