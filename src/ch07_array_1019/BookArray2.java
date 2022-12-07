@@ -9,7 +9,16 @@ public class BookArray2 {
 		// 출력은 기존 showBookInfo() 를 활용함.
 		
 		// Book 클래스 형으로 배열을 선언했음 . 갯수가 5개짜리. 
-		// 해당 구성 요소가 , Book 형의 객체라는 것 알아야 함. 
+		// 해당 구성 요소가 , Book 형의 객체라는 것 알아야 함.
+		Book[] library2 = new Book[3];
+		library2[0] = new Book("태백산맥", "조정래",10000);
+		library2[1] = new Book("데미안", "헤르만 헤세",20000);
+		library2[2] = new Book("어떻게 살 것인가", "유시민",30000);
+		
+		for(int i=0; i<library2.length; i++){
+			library2[i].showBookInfo();
+		}
+		
 		Book[] library = new Book[5];
 		Student[] students = new Student[5];
 		students[0] = new Student("이상용1",20000);
