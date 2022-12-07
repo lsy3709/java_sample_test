@@ -8,11 +8,26 @@ public class ArrayListTest {
 	public static void main(String[] args) {
 
 		//Student 타입으로 ArrayList 를 만들기. -> students 
+		ArrayList<Student> students = new ArrayList<Student>();
 		// 해당 ArrayList에 각자 알고 있는 이름 3개만 등록하기.
+		students.add( new Student("조정래") );
+		students.add( new Student("헤르만 헤세") );
+		students.add( new Student("유시민") );
 		// Student에 생성자를 잘 보고 객체 만들기.
 		// showInfo를 이용해 출력해보기.
 		// 기본 for문 출력하고
-		// 향상된 for 문 출력하기. 
+		// 향상된 for 문 출력하기.
+		for(int i=0; i<students.size(); i++){
+			
+			Student student = students.get(i);
+			student.showInfo();
+		}
+		
+		System.out.println();
+		System.out.println("=== 향상된 for문 사용 ===");
+		for(Student student : students){
+			student.showInfo();
+		}
 		
 		//기본 선언하는 부분
 		ArrayList<Book> library = new ArrayList<Book>();
