@@ -1,7 +1,8 @@
 package ch09_gamelevel_1021;
 
-public abstract class PlayerLevel {
+public  abstract class PlayerLevel {
 
+	String string = new String();
 	//추상 메서드는 반드시 구현을 해주세요. 강제성을 부여.
 	public abstract void run();
 	public abstract void jump();
