@@ -26,6 +26,12 @@ public class MainBoard {
 		// 다형성 예졔 ) .. 부모클래스형(타입) level ;
 		// 	level= new BeginnerLevel(); 사용 했습니다. 
 		
+		//추가하기.
+		// SuperLevel 다음 단계 : Ultraleve 만들기. 
+		// 추상 클래스인 PlayerLevel 상속 받고, 
+		// 기능을 구현하는데 . 구현 내용은 각자 알아서 좋게 작성. 
+		// 레벨 4 라고 임의로 지정. 
+		// Player 클래스에 있는 각 메서드 구현 해보기.
 		
 		Player player = new Player();
 		player.play(1);
