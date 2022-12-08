@@ -18,6 +18,12 @@ class Animal{
 		System.out.println("동물이 밥 먹었다.");
 	}
 	
+	public void sound()
+	{
+		System.out.println("동물이 소리낸다.");
+	}
+	
+	
 }
 
 class Human extends Animal{
@@ -35,6 +41,10 @@ class Human extends Animal{
 	{
 		System.out.println("사람이 밥 먹었다.");
 	}
+	public void sound()
+	{
+		System.out.println("사림이 소리낸다.");
+	}
 }
 
 class Tiger extends Animal{
@@ -50,6 +60,10 @@ class Tiger extends Animal{
 	public void eat()
 	{
 		System.out.println("사자는 고기를 먹었다.");
+	}
+	public void sound()
+	{
+		System.out.println("호랑이 소리낸다.");
 	}
 }
 
@@ -67,6 +81,10 @@ class Eagle extends Animal{
 	{
 		System.out.println("독수리 밥 먹었다.");
 	}
+	public void sound()
+	{
+		System.out.println("독소리 소리낸다.");
+	}
 }
 
 class Lsy extends Animal{
@@ -83,6 +101,33 @@ class Lsy extends Animal{
 	{
 		System.out.println("상용이 밥 먹었다.");
 	}
+	public void sound()
+	{
+		System.out.println("상용이 소리낸다.");
+	}
+}
+
+class Dog extends Animal{
+
+	@Override
+	public void move() {
+		// TODO Auto-generated method stub
+		System.out.println("멍멍이 움직입니다.");
+	}
+
+	@Override
+	public void eat() {
+		// TODO Auto-generated method stub
+		System.out.println("멍멍이 사료 먹어요.");
+	}
+
+	@Override
+	public void sound() {
+		// TODO Auto-generated method stub
+		System.out.println("멍멍이가 멍멍 소리내요.");
+	}
+	
+	
 }
 
 public class AnimalTest1 {
@@ -96,17 +141,27 @@ public class AnimalTest1 {
 	
 	 public static void main(String[] args) {
 		  AnimalTest1 aTest = new AnimalTest1();
+		  Dog dog = new Dog();
+		  Human h1 = new Human();
+		  Tiger t1 = new Tiger();
+		  Lsy lsy = new Lsy();
+		  dog.eat();
+		  dog.move();
+		  dog.sound();
+		  aTest.sound(dog);
+		  aTest.eatFood(lsy);
+		  
 //		  Human h1 = new Human();
 //		  aTest.moveAnimal(h1);
-		  aTest.moveAnimal(new Human());
-		  aTest.moveAnimal(new Tiger());
-		  aTest.moveAnimal(new Eagle());
-		  Lsy lsy = new Lsy();
-		  aTest.moveAnimal(lsy);
-		  aTest.eatFood(lsy);
-		  aTest.eatFood(new Human());
-		  aTest.eatFood(new Tiger());
-		  aTest.eatFood(new Eagle());
+//		  aTest.moveAnimal(new Human());
+//		  aTest.moveAnimal(new Tiger());
+//		  aTest.moveAnimal(new Eagle());
+//		  Lsy lsy = new Lsy();
+//		  aTest.moveAnimal(lsy);
+//		  aTest.eatFood(lsy);
+//		  aTest.eatFood(new Human());
+//		  aTest.eatFood(new Tiger());
+//		  aTest.eatFood(new Eagle());
 		  
 	 }
 
@@ -116,6 +171,11 @@ public class AnimalTest1 {
 	 
 	 private void eatFood(Animal animal) {
 		 animal.eat();
+		
+	}
+	 
+	 private void sound(Animal animal) {
+		 animal.sound();
 		
 	}
 
