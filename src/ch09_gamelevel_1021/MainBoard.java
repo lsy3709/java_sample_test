@@ -27,20 +27,28 @@ public class MainBoard {
 		// 	level= new BeginnerLevel(); 사용 했습니다. 
 		
 		//추가하기.
-		// SuperLevel 다음 단계 : Ultraleve 만들기. 
+		// SuperLevel 다음 단계 : Ultralevel 만들기. 
 		// 추상 클래스인 PlayerLevel 상속 받고, 
 		// 기능을 구현하는데 . 구현 내용은 각자 알아서 좋게 작성. 
 		// 레벨 4 라고 임의로 지정. 
 		// Player 클래스에 있는 각 메서드 구현 해보기.
+		// 필살기 한번 넣어 보기. 옵션.
+		
+		
 		
 		Player player = new Player();
-		player.play(1);
-		AdvancedLevel aLevel = new AdvancedLevel();
-		player.upgradeLevel(aLevel);
-		player.play(2);
-		SuperLevel sLevel = new SuperLevel();
-		player.upgradeLevel(sLevel);
-		player.play(3);
+//		player.play(1);
+//		AdvancedLevel aLevel = new AdvancedLevel();
+//		player.upgradeLevel(aLevel);
+//		player.play(2);
+//		SuperLevel sLevel = new SuperLevel();
+//		player.upgradeLevel(sLevel);
+//		player.play(3);
+		UltraLevel uLevel = new UltraLevel();
+		player.upgradeLevel(uLevel);
+		player.play(4);
+		UltimateSkill ultimateSkill = new UltimateSkill("울트라스킬", 5, "전역범위");
+		player.useUltimateSkill(ultimateSkill);
 		
 	}
 }
