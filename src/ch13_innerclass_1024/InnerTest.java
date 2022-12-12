@@ -2,14 +2,19 @@ package ch13_innerclass_1024;
 
 class OutClass {
 
+	//OutClass 의 멤버 변수, 
 	private int num = 10;
 	private static int sNum = 20;
+	
+	//포함 관계, 다른 클래스의 객체(참조형 변수)
 	private InClass inClass;
 	
 	public OutClass(){
 		inClass = new InClass(); // 내부 클래스 생성
 	}
 	
+	// static 없어서, 인스턴스 내부 클래스
+	// 객체 생성해서 접근 해야함. 
 	class InClass{
 		
 		int inNum = 100;
