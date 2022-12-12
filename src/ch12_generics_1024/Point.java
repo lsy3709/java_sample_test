@@ -4,8 +4,9 @@ public class Point<T, V> {
 	// Integer T
 	// Double V
 	
-	T x;
-	V y;
+	// 포함 관계 , has A 관계.
+	T x; //Person 형
+	V y; // Animal 형 
 	
 	Point(T x, V y){
 		this.x = x;

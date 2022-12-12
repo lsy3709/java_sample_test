@@ -22,13 +22,16 @@ public class CustomerTest {
 		seller.sell();
 		seller.order();
 		
-		if( seller instanceof Customer){
-			Customer customer2 = (Customer)seller;
-			customer2.buy();
-			customer2.sell();
-		}
+		Refund refund = customer;
+		refund.refund();
 		
-		customer.order();
+//		if( seller instanceof Customer){
+//			Customer customer2 = (Customer)seller;
+//			customer2.buy();
+//			customer2.sell();
+//		}
+//		
+//		customer.order();
 	}
 }
 
