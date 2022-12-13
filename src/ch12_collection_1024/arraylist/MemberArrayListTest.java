@@ -28,7 +28,12 @@ public class MemberArrayListTest {
 		// memberArrayList 메서드들 확인. 
 		memberArrayList.showAllMember();
 		
-		memberArrayList.removeMember(lsy.getMemberId());
+		memberArrayList.removeMember(memberHong.getMemberId());
 		memberArrayList.showAllMember();
 	}
 }
+
+
+
+
+

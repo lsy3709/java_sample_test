@@ -7,19 +7,24 @@ import ch12_collection_1024.Member;
 
 public class MemberHashMap {
 
+	// ArrayList  와  Map 은 꼭 잘 봐주세요.!!
+	
+	// 포함 관계로 선언. , 다른 클래스 형을 첨부 하는 방법은 매우 많이 사용함. 
 	private HashMap<Integer, Member> hashMap;
 	
+	// 기본 생성자를 호출 하면서, 다른 클래스형의 컬렉션을 선언한 참조형 변수에 할당하는 작업. 
 	public MemberHashMap()
 	{
 		hashMap = new HashMap<Integer, Member>();
 	}
-	
+	// 해당 맵이라는 컬렉션에 추가하고.
 	public void addMember(Member member){
 		
 		hashMap.put(member.getMemberId(), member);
 		
 	}
 	
+	// 해당 맵에 원소를 제거하고
 	public boolean removeMember(int memberId){
 		
 		if(hashMap.containsKey(memberId)){
@@ -31,6 +36,7 @@ public class MemberHashMap {
 		return false;
 	}
 	
+	// 해당 컬렉션의 반복자를 이용해서 가져오기.
 	public void showAllMember(){
 		Iterator<Integer> ir = hashMap.keySet().iterator();
 		while (ir.hasNext()){

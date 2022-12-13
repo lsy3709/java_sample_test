@@ -1,5 +1,6 @@
 package ch12_map.treemap_1024;
 
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.TreeMap;
 
@@ -9,9 +10,13 @@ public class MemberTreeMap {
 
 	private TreeMap<Integer, Member> treeMap;
 	
+	//Comparator 존재하는 reverseOrder 메서드 이용해서 역(내림차순으로 정렬하기.)
+	Comparator<Integer> comparator = Comparator.reverseOrder();
+	
 	public MemberTreeMap()
 	{
-		treeMap = new TreeMap<Integer, Member>();
+	//	treeMap = new TreeMap<Integer, Member>();
+		treeMap = new TreeMap<Integer, Member>(comparator);
 	}
 	
 	public void addMember(Member member){
@@ -26,7 +31,7 @@ public class MemberTreeMap {
 			return true;
 		}
 		
-		System.out.println(memberId + "�� �������� �ʽ��ϴ�");
+		System.out.println(memberId + "테스트");
 		return false;
 	}
 	

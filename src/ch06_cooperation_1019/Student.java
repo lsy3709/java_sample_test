@@ -10,7 +10,14 @@ public class Student {
 		  this.studentName = studentName;
 		  this.money = money;
 	 }
-	    
+	  
+	 //택시 타기 추가.
+	 public void takeTaxi(KakoTaxi kakoTaxi) {
+		 kakoTaxi.take(5000);
+		  this.money -= 5000;
+		  
+	 }
+	 
 	 public void takeBus(Bus bus) {
 		  bus.take(1000);
 		  this.money -= 1000;

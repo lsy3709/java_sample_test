@@ -8,11 +8,15 @@ public class LinkedListTest {
 
 		LinkedList<String> myList = new LinkedList<String>();
 		
+//		String str1 = new String ();
+//		str1 = "D";
+		
 		myList.add("A");
 		myList.add("B");
 		myList.add("C");
 		
 		System.out.println(myList);
+		System.out.println(myList.get(0).hashCode());
 		myList.add(1, "D");
 		
 		System.out.println(myList);

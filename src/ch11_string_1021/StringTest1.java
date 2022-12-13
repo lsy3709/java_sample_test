@@ -15,5 +15,11 @@ public class StringTest1 {
 	
 		System.out.println(str3 == str4);  //true
 		System.out.println(str3.equals(str4)); //true
+		System.out.println(System.identityHashCode(str3));
+		System.out.println(System.identityHashCode(str4));
 	}
 }
+
+
+
+

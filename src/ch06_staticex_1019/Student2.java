@@ -3,6 +3,8 @@ package ch06_staticex_1019;
 public class Student2 {
 	
 	private static int serialNum = 1000;
+	
+	
 	int studentID;
 	String studentName;
 	int grade;
@@ -21,9 +23,10 @@ public class Student2 {
 		studentName = name;
 	}
 
+	
 	public static int getSerialNum() {
 		int i = 10;
-		//studentName = "aaa";   //���� ��
+	//	studentName = "aaa";   //���� ��
 		return serialNum;
 	}
 
