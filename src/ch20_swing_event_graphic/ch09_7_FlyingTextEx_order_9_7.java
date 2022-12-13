@@ -1,4 +1,4 @@
-package ch20_swing_basic;
+package ch20_swing_event_graphic;
 
 import java.awt.Container;
 import java.awt.event.KeyAdapter;
@@ -8,13 +8,13 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class FlyingTextEx extends JFrame {
+public class ch09_7_FlyingTextEx_order_9_7 extends JFrame {
 	// 상,하,좌,우 키를 입력하면, 문자열이 10픽셀씨 이동.
 
 	private JPanel contentPane = new JPanel();
 	private JLabel la = new JLabel("Hello");
 	
-	public FlyingTextEx() {
+	public ch09_7_FlyingTextEx_order_9_7() {
 		super("상,하,좌,우 키를 이용해 텍스트 움직이기");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
@@ -71,7 +71,7 @@ public class FlyingTextEx extends JFrame {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		new FlyingTextEx();
+		new ch09_7_FlyingTextEx_order_9_7();
 
 	}
 

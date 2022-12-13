@@ -1,4 +1,4 @@
-package ch20_swing_basic;
+package ch20_swing_event_graphic;
 
 import java.awt.Color;
 import java.awt.Component;
@@ -14,7 +14,7 @@ import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class MouseEventAllEx extends JFrame {
+public class ch09_8_MouseEventAllEx_order_9_8 extends JFrame {
 	// 마우스 이벤트 처리 실행.
 	// 컨텐트 팬에 들어오거나 나가면 색이 변경.
 	// 드래그 및 , 프레스 등을 했을 때 제목에 좌표값 표기.
@@ -25,7 +25,7 @@ public class MouseEventAllEx extends JFrame {
 	
 	
 	
-	public MouseEventAllEx() {
+	public ch09_8_MouseEventAllEx_order_9_8() {
 		setTitle("MouseListener와 Mouse MotionListener 예제");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		Container c = getContentPane();
@@ -136,7 +136,7 @@ public class MouseEventAllEx extends JFrame {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		new MouseEventAllEx();
+		new ch09_8_MouseEventAllEx_order_9_8();
 	}
 
 }

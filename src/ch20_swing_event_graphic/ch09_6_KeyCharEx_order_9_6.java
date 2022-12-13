@@ -1,4 +1,4 @@
-package ch20_swing_basic;
+package ch20_swing_event_graphic;
 
 import java.awt.Color;
 import java.awt.Container;
@@ -9,14 +9,14 @@ import java.awt.event.KeyEvent;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class KeyCharEx extends JFrame {
+public class ch09_6_KeyCharEx_order_9_6 extends JFrame {
 	// KeyListener 활용 - 입력된 문자 키 판별
 	// 컨텐트팬에 키 리스너를 달고, 포커스를 주어, 키 입력을 받도록 해야함. 
 	// 색은 rgb 0~255 사이 램덤하게
 	
 	private JLabel la = new JLabel("<Enter>키로 배경색이 바뀜.");
 	
-	public KeyCharEx() {
+	public ch09_6_KeyCharEx_order_9_6() {
 		super("KeyListener 의 문자 키 입력 예제");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		Container c = getContentPane();
@@ -50,7 +50,7 @@ public class KeyCharEx extends JFrame {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		new KeyCharEx();
+		new ch09_6_KeyCharEx_order_9_6();
 	}
 
 }

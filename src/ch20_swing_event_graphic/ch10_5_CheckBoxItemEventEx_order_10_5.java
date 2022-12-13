@@ -1,4 +1,4 @@
-package ch20_swing_basic;
+package ch20_swing_event_graphic;
 
 import java.awt.Container;
 import java.awt.FlowLayout;
@@ -9,12 +9,12 @@ import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class CheckBoxItemEventEx extends JFrame {
+public class ch10_5_CheckBoxItemEventEx_order_10_5 extends JFrame {
 	private JCheckBox [] fruits = new JCheckBox[3];
 	private String [] names = {"사과","배","체리"};
 	private JLabel sumLabel;
 	
-	public CheckBoxItemEventEx() {
+	public ch10_5_CheckBoxItemEventEx_order_10_5() {
 		
 		setTitle("체크박스와 ItemEvent 예제");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -40,6 +40,7 @@ public class CheckBoxItemEventEx extends JFrame {
 
 		@Override
 		public void itemStateChanged(ItemEvent e) {
+			
 			if(e.getStateChange() == e.SELECTED) {
 				if(e.getItem() == fruits[0]) 
 					sum += 100;
@@ -63,7 +64,7 @@ public class CheckBoxItemEventEx extends JFrame {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		new CheckBoxItemEventEx();
+		new ch10_5_CheckBoxItemEventEx_order_10_5();
 	}
 
 }

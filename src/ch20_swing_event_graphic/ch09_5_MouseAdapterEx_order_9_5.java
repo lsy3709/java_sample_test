@@ -1,4 +1,4 @@
-package ch20_swing_basic;
+package ch20_swing_event_graphic;
 
 import java.awt.Container;
 import java.awt.HeadlessException;
@@ -8,11 +8,11 @@ import java.awt.event.MouseEvent;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class MouseAdapterEx extends JFrame {
+public class ch09_5_MouseAdapterEx_order_9_5 extends JFrame {
 	private JLabel la = new JLabel("Hello");
 	
 
-	public MouseAdapterEx() {
+	public ch09_5_MouseAdapterEx_order_9_5() {
 		super();
 		setTitle("Mouse 이벤트 예제");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -40,7 +40,7 @@ public class MouseAdapterEx extends JFrame {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		new MouseAdapterEx();
+		new ch09_5_MouseAdapterEx_order_9_5();
 
 	}
 

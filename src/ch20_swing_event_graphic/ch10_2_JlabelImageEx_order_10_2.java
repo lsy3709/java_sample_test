@@ -1,4 +1,4 @@
-package ch20_swing_basic;
+package ch20_swing_event_graphic;
 
 import java.awt.Container;
 import java.awt.FlowLayout;
@@ -8,9 +8,9 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
-public class JlabelImageEx extends JFrame {
+public class ch10_2_JlabelImageEx_order_10_2 extends JFrame {
 
-	public JlabelImageEx() {
+	public ch10_2_JlabelImageEx_order_10_2() {
 		setTitle("레이블 이미지 예제");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		Container c = getContentPane();
@@ -35,7 +35,7 @@ public class JlabelImageEx extends JFrame {
 	}
 	
 	public static void main(String[] args) {
-		new JlabelImageEx();
+		new ch10_2_JlabelImageEx_order_10_2();
 	}
 
 }

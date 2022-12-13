@@ -1,4 +1,4 @@
-package ch20_swing_basic;
+package ch20_swing_event_graphic;
 
 import java.awt.Container;
 import java.awt.Dimension;
@@ -8,9 +8,9 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-public class SwingImageEx extends JFrame {
+public class ch10_3_ButtonI_mageEx_order_10_3 extends JFrame {
 
-	public SwingImageEx() {
+	public ch10_3_ButtonI_mageEx_order_10_3() {
 		setTitle(" 이미지 버튼 예제");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		Container c = getContentPane();
@@ -33,7 +33,7 @@ public class SwingImageEx extends JFrame {
 	}
 	
 	public static void main(String[] args) {
-		new SwingImageEx();
+		new ch10_3_ButtonI_mageEx_order_10_3();
 	}
 
 }
