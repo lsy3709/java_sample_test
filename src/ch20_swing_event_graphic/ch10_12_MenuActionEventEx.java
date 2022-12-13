@@ -68,6 +68,7 @@ public class ch10_12_MenuActionEventEx extends JFrame {
 	
 	public static void main(String[] args) {
 		new ch10_12_MenuActionEventEx();
+		//test
 	}
 
 }
