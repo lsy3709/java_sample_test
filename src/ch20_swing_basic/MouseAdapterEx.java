@@ -12,7 +12,7 @@ public class MouseAdapterEx extends JFrame {
 	private JLabel la = new JLabel("Hello");
 	
 
-	public MouseAdapterEx() throws HeadlessException {
+	public MouseAdapterEx() {
 		super();
 		setTitle("Mouse 이벤트 예제");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
