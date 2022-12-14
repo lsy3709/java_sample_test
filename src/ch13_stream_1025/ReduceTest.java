@@ -16,7 +16,7 @@ public class ReduceTest {
 
 	public static void main(String[] args) {
 
-		String[] greetings = {"�ȳ��ϼ���~~~", "hello", "Good morning", "�ݰ����ϴ�^^"};
+		String[] greetings = {"A", "AB", "ABC", "ABCD"};
 		
 		System.out.println(Arrays.stream(greetings).reduce("", (s1, s2)-> 
 		                          {if (s1.getBytes().length >= s2.getBytes().length) 

@@ -17,7 +17,7 @@ public class TestStringConcat {
 		concat2.makeString(s1, s2);
 		i = 300;
 		
-		StringConcat concat3 = new StringConcat() {
+		StringConcat concat3 = new StringConcat() { //익명 클래스 사용.
 			
 			@Override
 			public void makeString(String s1, String s2) {

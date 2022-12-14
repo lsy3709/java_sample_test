@@ -7,9 +7,14 @@ public class TravelTest {
 
 	public static void main(String[] args) {
 		
-		TravelCustomer customerLee = new TravelCustomer("이순신", 40, 100);
-		TravelCustomer customerKim = new TravelCustomer("김유신", 20, 100);
-		TravelCustomer customerHong = new TravelCustomer("홍길동", 13, 50);
+		//본인들이 TravelCustomer 재활용하고, 객체를 4개정도, 한개더 추가하고
+		// 중간 연산, 최종연산을 이용해서 출력 하는예제.
+		// 예1 , 인원스 카운트 
+		// 예2 , 비용이 제일 많은 사람출력해보기.
+		
+		TravelCustomer customerLee = new TravelCustomer("이순신", 40, 100000);
+		TravelCustomer customerKim = new TravelCustomer("김유신", 20, 100000);
+		TravelCustomer customerHong = new TravelCustomer("홍길동", 13, 500000);
 		
 		List<TravelCustomer> customerList = new ArrayList<>();
 		customerList.add(customerLee);

@@ -20,7 +20,7 @@ public class TestLambda {
 		
 	}
 	
-	public static void showMyString(PrintString p) {
+	public static void showMyString(PrintString p) {// 매개변수의 자료형 인터페이스 : 다형성
 		p.showString("hello lambda_2");
 	}
 	
