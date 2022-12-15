@@ -45,7 +45,7 @@ public class ch11_9_GraphicsDrawLineMouseEx3 extends JFrame {
 				@Override
 				public void actionPerformed(ActionEvent e) {
 					
-					repaint();
+					getParent().repaint(); 
 					addMouseListener(new MouseAdapter(){
 						public void mousePressed(MouseEvent e) {
 							state = 0;
@@ -58,7 +58,8 @@ public class ch11_9_GraphicsDrawLineMouseEx3 extends JFrame {
 							vEnd.add(endP);
 							
 							// 패널의 다시 그리기를 요청한다.
-							repaint(); // 주목
+							getParent().repaint(); // 주목
+							//repaint(); // 주목
 						}
 					});
 					
@@ -69,7 +70,9 @@ public class ch11_9_GraphicsDrawLineMouseEx3 extends JFrame {
 				
 				@Override
 				public void actionPerformed(ActionEvent e) {
+					getParent().repaint(); 
 					addMouseListener(new MouseAdapter(){
+						
 						public void mousePressed(MouseEvent e) {
 							state = 1;
 							Point startP2 = e.getPoint();
@@ -80,7 +83,8 @@ public class ch11_9_GraphicsDrawLineMouseEx3 extends JFrame {
 							vEnd2.add(endP2);
 							
 							// 패널의 다시 그리기를 요청한다.
-							repaint(); // 주목
+							getParent().repaint(); // 주목
+							//repaint(); // 주목
 						}
 					});
 					
