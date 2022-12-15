@@ -1,6 +1,7 @@
 package ch20_swing_event_graphic;
 
 import java.awt.Color;
+
 import java.awt.Component;
 import java.awt.Graphics;
 import java.awt.Point;
@@ -8,11 +9,24 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.Stack;
 import java.util.Vector;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+
+
+ class Sketch {
+	static Vector<Point> sketch = new Vector<Point>();
+	static Stack<Integer> start = new Stack<Integer>();
+	static Stack<Integer> end = new Stack<Integer>();
+	
+	static Stack<Integer> redoStart = new Stack<Integer>();
+	static Stack<Integer> redoEnd = new Stack<Integer>();
+	int next;
+	
+}
 
 public class ch11_9_GraphicsDrawLineMouseEx3 extends JFrame {
 	public ch11_9_GraphicsDrawLineMouseEx3() {
@@ -134,6 +148,7 @@ public class ch11_9_GraphicsDrawLineMouseEx3 extends JFrame {
 		}
 	}
 }
+	
 	public static void main(String [] args) {
 		new ch11_9_GraphicsDrawLineMouseEx3();
 	} 
