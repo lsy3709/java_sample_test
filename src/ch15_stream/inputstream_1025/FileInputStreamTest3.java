@@ -7,6 +7,7 @@ public class FileInputStreamTest3 {
 	public static void main(String[] args) {
 		 		
 		try (FileInputStream fis = new FileInputStream("input.txt")){
+			// input.txt 내용안에 있는 부분을 바이트 단위로 읽어서 해당 객체에 들어 있음.  
 			
 			byte[] bs = new byte[10];
 			int i;

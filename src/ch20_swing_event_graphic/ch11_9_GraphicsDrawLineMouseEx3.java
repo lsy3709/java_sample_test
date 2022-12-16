@@ -21,6 +21,13 @@ public class ch11_9_GraphicsDrawLineMouseEx3 extends JFrame {
 	class MyPanel extends JPanel {
 		private Vector<Point> vStart = new Vector<Point>();
 		private Vector<Point> vEnd = new Vector<Point>();
+		
+		private Vector<Point> vStart2 = new Vector<Point>();
+		private Vector<Point> vEnd2 = new Vector<Point>();
+		
+		
+		
+		
 		int state = 0;
 		
 		public MyPanel() {
@@ -35,9 +42,10 @@ public class ch11_9_GraphicsDrawLineMouseEx3 extends JFrame {
 				public void actionPerformed(ActionEvent e) {
 					addMouseListener(new MouseAdapter(){
 						public void mousePressed(MouseEvent e) {
+							state = 0;
 							Point startP = e.getPoint();
 							vStart.add(startP);
-							state = 0;
+							
 						}
 						public void mouseReleased(MouseEvent e) {
 							Point endP = e.getPoint();
@@ -45,6 +53,7 @@ public class ch11_9_GraphicsDrawLineMouseEx3 extends JFrame {
 							
 							// 패널의 다시 그리기를 요청한다.
 							repaint(); // 주목
+//							getParent().repaint(); // 주목
 						}
 					});
 					
@@ -57,16 +66,18 @@ public class ch11_9_GraphicsDrawLineMouseEx3 extends JFrame {
 				public void actionPerformed(ActionEvent e) {
 					addMouseListener(new MouseAdapter(){
 						public void mousePressed(MouseEvent e) {
-							Point startP = e.getPoint();
-							vStart.add(startP);
 							state = 1;
+							Point startP2 = e.getPoint();
+							vStart2.add(startP2);
+							
 						}
 						public void mouseReleased(MouseEvent e) {
-							Point endP = e.getPoint();
-							vEnd.add(endP);
+							Point endP2 = e.getPoint();
+							vEnd2.add(endP2);
 							
 							// 패널의 다시 그리기를 요청한다.
 							repaint(); // 주목
+							//getParent().repaint(); // 주목
 						}
 					});
 					
@@ -79,20 +90,25 @@ public class ch11_9_GraphicsDrawLineMouseEx3 extends JFrame {
 		}
 
 		public void paintComponent(Graphics g) {
-			super.paintComponent(g);
+			//super.paintComponent(g);
 			g.setColor(Color.BLUE); 
+			if(state == 0) {
 			for(int i=0; i<vStart.size(); i++) {
 				Point s = vStart.elementAt(i); 
 				Point e = vEnd.elementAt(i);
-				if(state == 0) {
+				
 				g.drawLine((int)s.getX(), (int)s.getY(), 
 								(int)e.getX(), (int)e.getY());
 				}
+			}
 				else {
-					int x = Math.min((int)s.getX(), (int)e.getX());
-				int y = Math.min((int)s.getY(), (int)e.getY());
-				int width = Math.abs((int)s.getX() - (int)e.getX());
-				int height = Math.abs((int)s.getY() - (int)e.getY());
+					for(int i=0; i<vStart2.size(); i++) {
+					Point s2 = vStart2.elementAt(i); 
+					Point e2 = vEnd2.elementAt(i);
+					int x = Math.min((int)s2.getX(), (int)e2.getX());
+				int y = Math.min((int)s2.getY(), (int)e2.getY());
+				int width = Math.abs((int)s2.getX() - (int)e2.getX());
+				int height = Math.abs((int)s2.getY() - (int)e2.getY());
 				g.drawOval(x, y, width, height); // 타원 그리기
 			}
 		}
