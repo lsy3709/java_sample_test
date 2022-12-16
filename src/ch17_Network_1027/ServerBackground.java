@@ -34,7 +34,7 @@ public class ServerBackground {
         
         try {
             Collections.synchronizedMap(clientMap); //교통정리를 해준다.( clientMap을 네트워크 처리해주는것 ) 
-            serverSocket = new ServerSocket(7777);
+            serverSocket = new ServerSocket(11223);
  
             while (true) {
                 /** XXX 01.서버가 할일 : 방문자를 계속 받아서, 쓰레드 리시버를 계속 생성 */
