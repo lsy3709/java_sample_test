@@ -26,8 +26,8 @@ public class MemberDAO {
 	private static final String DRIVER = "oracle.jdbc.driver.OracleDriver";
 	private static final String URL = "jdbc:oracle:thin:@localhost:1521:xe";
 
-	private static final String USER = "scott"; // DB ID
-	private static final String PASS = "tiger"; // DB 패스워드
+	private static final String USER = "system"; // DB ID
+	private static final String PASS = "oracle"; // DB 패스워드
 	Member_List mList;
 	/**
 	 * 필요한 변수선언

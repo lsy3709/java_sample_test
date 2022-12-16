@@ -5,3 +5,6 @@
 /JDBC_select_ex_1.class
 /JDBC_delete_ex_1.class
 /JDBC_update_ex_1.class
+/JDBC_PoolDAO.class
+/JDBC_PoolDTO.class
+/JDBC_PoolTest.class
