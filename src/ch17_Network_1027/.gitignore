@@ -7,3 +7,8 @@
 /Network_ex6_2.class
 /Network_ex7_Chat_Client.class
 /Network_ex7_Chat_Server.class
+/ClientBackground.class
+/ClientGUI.class
+/ServerBackground$Receiver.class
+/ServerBackground.class
+/ServerGUI.class

@@ -1,0 +1,38 @@
+회원 관리 리스트 에 메뉴바를 추가해서, 회원 가입 항목을 클릭하면 회원 가입창이 나오는 과정. 
+간단히 정리 중. 
+1. 그래픽 GUI작업. 
+// 메뉴바를 의미
+JMenuBar mb = new JMenuBar(); 
+		// 첫 버튼 메뉴 
+		JMenu screenMenu = new JMenu("메뉴");
+		// 드롭 다운 된 메뉴 요소
+		JMenuItem jm = new JMenuItem("회원가입")
+		screenMenu.add(jm);
+		// 메뉴바 화면에 붙이기. 
+		mb.add(screenMenu);
+		//JFrame 에 붙이기.
+		setJMenuBar(mb);
+		
+2.Member_List 화면을 붙이는 작업. 
+1번의 코드를 복붙하면,컴파일러 오류가 뜨면 ,
+일단, 체크는 임포트가 되었는지 확인. 
+ 자동임포트 ctrl + shift + o 하면 된다. 
+
+3. 해당 메뉴의 버튼을 클릭시 이벤트 처리하는 리스너 정의
+이 클래스는 해당 리스트 클래스의 생성자 밖에 일단 복사 해둔 상태임. 
+class MenuActionListener implements ActionListener { 
+		public void actionPerformed(ActionEvent e) {
+			String cmd = e.getActionCommand(); 
+			switch(cmd) { // 메뉴 아이템의 종류 구분
+				case "회원가입" :
+					MemberProc join = new MemberProc();
+					
+					break;
+							}
+		}
+	}
+4. 정의된 클래스 사용.
+	MenuActionListener listener = new MenuActionListener(); 
+		jm.addActionListener(listener);
+		
+	

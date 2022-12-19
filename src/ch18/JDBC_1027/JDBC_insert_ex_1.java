@@ -10,8 +10,10 @@ public class JDBC_insert_ex_1 {
 		 String driver = "oracle.jdbc.driver.OracleDriver";   // 10행 ~ 14행 데이터베이스 
 		 //접속을 위한 4가지 정보를 String  변수에  저장.
 		 String url = "jdbc:oracle:thin:@localhost:1521:xe";
-		 String userid = "scott";
-		 String passwd = "tiger";
+		 String userid = "system";
+		 String passwd = "oracle";
+		 
+		 
 		 Connection con = null;
 		 PreparedStatement pstmt = null;
 		 
@@ -28,9 +30,9 @@ public class JDBC_insert_ex_1 {
 			 //기호를 사용한다. 나중에 PreparedStatement 객체의 set()메소드를 
 			 //사용하여 값을 동적으로 설정한다. 
 			 pstmt = con.prepareStatement(sql);
-			 pstmt.setInt(1, 50);
-			 pstmt.setString(2, "개발");
-			 pstmt.setString(3, "서울");
+			 pstmt.setInt(1, 60);
+			 pstmt.setString(2, "개발2");
+			 pstmt.setString(3, "서울2");
 			 //SQL 문 전송에 필요한 PreparedStatement 객체를 
 			 //Connection 객체의 preparedStatement(sql)메소드를 이용해서 얻고 '?' 대신에 
 			 //설정할 값을 인덱스(1부터 시작) 를 사용하여 set() 메소드로 설정한다.

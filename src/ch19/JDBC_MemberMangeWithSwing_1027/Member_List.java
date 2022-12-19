@@ -11,6 +11,9 @@ import java.util.Vector;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
@@ -34,6 +37,23 @@ public class Member_List extends JFrame implements MouseListener, ActionListener
 
 	public Member_List() {
 		super("회원관리 프로그램  v0.1.1");
+		JMenuBar mb = new JMenuBar(); 
+		// 첫 버튼 메뉴 
+		JMenu screenMenu = new JMenu("메뉴");
+		// 드롭 다운 된 메뉴 요소
+		JMenuItem jm = new JMenuItem("회원가입");
+		screenMenu.add(jm);
+		// 메뉴바 화면에 붙이기. 
+		mb.add(screenMenu);
+		//JFrame 에 붙이기.
+		setJMenuBar(mb);
+		
+	
+		//만들었던 리스너를 사용함.
+		MenuActionListener listener = new MenuActionListener(); 
+		jm.addActionListener(listener);
+		
+		
 		MemberDAO dao = new MemberDAO();
 		v = dao.getMemberList();
 		System.out.println("v=" + v);
@@ -75,6 +95,19 @@ public class Member_List extends JFrame implements MouseListener, ActionListener
 				
 	}// end 생성자
 
+	//해당 메뉴의 이벤트를 처리하는 내용을 사용했음. 
+	class MenuActionListener implements ActionListener { 
+		public void actionPerformed(ActionEvent e) {
+			String cmd = e.getActionCommand(); 
+			switch(cmd) { // 메뉴 아이템의 종류 구분
+				case "회원가입" :
+					MemberProc join = new MemberProc();
+					
+					break;
+							}
+		}
+	}
+	
 	// JTable의 컬럼
 	public Vector getColumn() {
 		Vector col = new Vector();

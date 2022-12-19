@@ -5,13 +5,16 @@ public class Ex16_Ex2 {
 	           Go_Thread g = new Go_Thread(); // Go_Thread 클래스의 객체를 생성.
 	           Come_Thread c = new Come_Thread();
 	        // Come_Thread 클래스의 객체를 생성.
+	           System.out.println("g.start()호출전");
 	           g.start();
+	           System.out.println("g.start()호출후");
 	           //Come_Thread 클래스 객체의 start() 메소드를 호출한다.
 	           // Go_Thread 클래스의 객체에서 먼저 start() m메소드를 호출하여 
 	           // Go_Tread 클래스 객체의 start() 메소드에 의해 
 	           // Com_Thread 객체의 run() 메소드가 번갈아 가면서 결과를 
 	           // 출력한다. 
-	           
+	           System.out.println("c.start()호출전");
 	           c.start();
+	           System.out.println("c.start()호출후");
 	      }
 	 }

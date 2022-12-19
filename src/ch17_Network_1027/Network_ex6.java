@@ -12,6 +12,7 @@ public class Network_ex6 {
 //ServerSocket 클래스를 생성한다. 
 
 		try {
+			//클라이언트들이 접근 하기위한 해당 포트 번호 : 11223
 			s = new ServerSocket(11223);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -28,7 +29,7 @@ public class Network_ex6 {
 
 				OutputStream os = s1.getOutputStream();
 				ObjectOutputStream oos = new ObjectOutputStream(os);
-				oos.writeObject("Hello World_강사피씨 현재 이상용씨가 사용중입니다.");
+				oos.writeObject("Hello World_강사피씨 현재 이상용씨가 사용중입니다. 테스트 중!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 // 클라이언트에게 "Hello World"문자열을 출력시키기 위해서 
 //OutputStream을 얻고 filter 계열인 ObjectOutputStream 클래스의 
 //writeObject 메소드를 이용하여 데이터를 출력시킨다. 

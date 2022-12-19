@@ -13,6 +13,18 @@ public class FileInputStreamTest1 {
 			System.out.println((char)fis.read());
 			System.out.println((char)fis.read());
 			System.out.println((char)fis.read());
+			System.out.println((char)fis.read());
+			System.out.println((char)fis.read());
+			System.out.println((char)fis.read());
+			System.out.println((char)fis.read());
+			System.out.println((char)fis.read());
+			System.out.println((char)fis.read());
+			System.out.println((char)fis.read());
+			System.out.println((char)fis.read());
+			System.out.println((char)fis.read());
+			System.out.println((char)fis.read());
+			System.out.println((char)fis.read());
+			System.out.println((char)fis.read());
 		
 		} catch (IOException e) {
 			System.out.println(e);

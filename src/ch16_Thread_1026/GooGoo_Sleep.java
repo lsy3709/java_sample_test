@@ -12,6 +12,7 @@ public class GooGoo_Sleep implements Runnable {
 	    public void run(){
 	    	// run() 메소드안에서 랜덤값(임의의값)을 long 형으로 얻음.
 	      long sleepTime = (long)(Math.random() * 5000 );
+//	        long sleepTime = 10000;
 	      System.out.println(dan+"단이"+ sleepTime+"만큼 sleep..");
 	      try{
 	          Thread.sleep( sleepTime );

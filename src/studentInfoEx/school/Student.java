@@ -18,6 +18,7 @@ public class Student {
 		this.majorSubject = majorSubject;
 	}
 	
+	// 학생이 수강한 과목의 점수를 등록하는 메서드.
 	public void addSubjectScore(Score score){
 		scoreList.add(score);
 	}
@@ -46,10 +47,12 @@ public class Student {
 		this.majorSubject = majorSubject;
 	}
 
+	
+	// 학생의 점수 목록 조회
 	public ArrayList<Score> getScoreList(){
 		return scoreList;
 	}
-	
+	// 학생의 점수 목록 설정.
 	public void setScoreList(ArrayList<Score> scoreList) {
 		this.scoreList = scoreList;
 	}

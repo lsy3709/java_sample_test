@@ -20,8 +20,8 @@ public class JDBC_select_ex_1 {
 //		 String url = "jdbc:oracle:thin:@10.100.102.21:1521:xe";
 		 
 		 //유저, 패스워드, 디비서버에 있는 계정을 사용합니다. 
-		 String userid = "scott";
-		 String passwd = "tiger";
+		 String userid = "system";
+		 String passwd = "oracle";
 		 
 		 // 각 인터페이스를 간략히 소개. 
 		 //  디비를 연결하기위한 인스턴스.
