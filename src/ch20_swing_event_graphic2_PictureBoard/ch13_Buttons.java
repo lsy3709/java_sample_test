@@ -1,4 +1,4 @@
-package ch20_swing_event_graphic.Ex3_Test2;
+package ch20_swing_event_graphic2_PictureBoard;
 
 import java.awt.Color;
 import java.awt.event.MouseEvent;
@@ -16,9 +16,11 @@ public class ch13_Buttons implements MouseListener {
 	// JTabbedPane 상속 받아서 탭 추가하기.
 	static ch13_CanvasGroup canvas = new ch13_CanvasGroup();
 	ch13_Stroke stroke = new ch13_Stroke();
+	
 	static boolean clear;
 	static boolean erase;
 	static boolean text;
+	
 	int canvasNum = 0;
 
 	ch13_Buttons() {
@@ -78,9 +80,10 @@ public class ch13_Buttons implements MouseListener {
 
 		// 클리어
 		if (button == toolbuttons[2]) {
-			//setInit();
+			setInit();
 			clear = true;
 			canvas.getSelectedComponent().repaint();
+			System.out.println("클리어 버튼 클릭");
 		}
 
 		// 색선택
@@ -149,7 +152,9 @@ public class ch13_Buttons implements MouseListener {
 
 	// 그리기 버튼 상태 모두 false , 버튼 테두리 선 모두 해제.
 	private void setInit() {
-
+		erase = false;
+		text = false;
+		
 		for (int i = 0; i < drawbuttons.length; i++) {
 			draw[i] = false;
 			drawbuttons[i].setBorderPainted(false);

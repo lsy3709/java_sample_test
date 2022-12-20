@@ -1,4 +1,4 @@
-package ch20_swing_event_graphic.Ex3_Test2;
+package ch20_swing_event_graphic2_PictureBoard;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -13,10 +13,6 @@ import java.awt.geom.Line2D;
 import java.awt.geom.Rectangle2D;
 
 import javax.swing.JPanel;
-
-
-
-
 
 
 public class ch13_Canvas extends JPanel {
@@ -46,6 +42,7 @@ public class ch13_Canvas extends JPanel {
 	class MyMouseListener extends MouseAdapter {
 
 		public void mousePressed(MouseEvent e) {
+			
 			if (ch13_Buttons.erase == true || ch13_Buttons.draw[0] == true) {
 				ch13_ColorFrame.colorChange = false;
 				start = e.getPoint();
@@ -143,6 +140,7 @@ public class ch13_Canvas extends JPanel {
 		Graphics2D g2 = (Graphics2D) g;
 
 		if (ch13_Buttons.clear == true) {
+			
 			ch13_Clear clearShape = new ch13_Clear();
 
 			g2.setColor(Color.white);
@@ -152,6 +150,7 @@ public class ch13_Canvas extends JPanel {
 			memory.colorMemory.push(Color.white);
 			memory.thicknessMemory.push(0);
 			ch13_Buttons.clear = false;
+			System.out.println("클리어 확인.");
 		}
 
 		else {
@@ -169,7 +168,7 @@ public class ch13_Canvas extends JPanel {
 								sketch.sketch.get(j + 1).y);
 
 					sketchNum++;
-				} else if (memory.memory.get(i).getClass().getSimpleName().equals("Clear"))
+				} else if (memory.memory.get(i).getClass().getSimpleName().equals("ch13_Clear"))
 					g2.fill((Shape) memory.memory.get(i));
 				else
 					g2.draw((Shape) memory.memory.get(i));
@@ -186,6 +185,13 @@ public class ch13_Canvas extends JPanel {
 
 			else {
 
+				//
+				if(ch13_Buttons.erase == true) {
+					g2.setColor(Color.white);
+					for (int i = sketch.next; i < sketch.sketch.size() -1; i++)
+						g2.drawLine(sketch.sketch.get(i).x, sketch.sketch.get(i).y, sketch.sketch.get(i+1).x, sketch.sketch.get(i+1).y);
+				}
+				
 				// 스케치
 				if (ch13_Buttons.draw[0] == true) {
 					for (int i = sketch.next; i < sketch.sketch.size() - 1; i++)

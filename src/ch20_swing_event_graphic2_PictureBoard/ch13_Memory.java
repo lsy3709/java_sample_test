@@ -1,4 +1,4 @@
-package ch20_swing_event_graphic.Ex3_Test2;
+package ch20_swing_event_graphic2_PictureBoard;
 
 import java.awt.Color;
 import java.util.Stack;
